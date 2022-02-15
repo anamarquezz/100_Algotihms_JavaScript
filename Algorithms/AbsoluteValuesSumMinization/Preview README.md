@@ -2,15 +2,23 @@ Given a sorted array of integers a, find an integer x from a such that the value
 
 abs(a[0] - x) + abs(a[1] - x) + ... + abs(a[a.length - 1] - x)
 
-is the smallest possible (here abs denotes the absolute value). If there are several possible answers, output the smallest one.
+is the smallest possible (here abs denotes the absolute value (+)). If there are several possible answers, output the smallest one.
 
 Example
 
 For a = [2, 4, 7], the output should be absoluteValuesSumMinimization(a) = 4.
+(2 - 2) + (4 - 2) + (7 - 2) = 7
+   0         2          5   = 7
+(2 - 4) + (4 - 4) + (7 - 4) = 5
+   2         0         3    = 5
+(2 - 7) + (4 - 7) + (7 - 7) = 8
+  (-5)  +  (-3)  +  (0)   = -8
 
 For a = [2, 4, 7, 6], the output should be absoluteValuesSumMinimization(a) = 4.
 
 For a = [2, 4, 7, 6, 6], the output should be absoluteValuesSumMinimization(a) = 7.
+(2 - 7) + (4 - 7) + (7 - 7)  + (6 - 7)  + (6 - 7) = 3
+   -5        -2        0         -1          -1    = -9
 
 For a = [2, 4, 7, 6, 6, 8], the output should be absoluteValuesSumMinimization(a) = 7.
 
